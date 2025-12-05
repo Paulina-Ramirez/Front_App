@@ -1,0 +1,146 @@
+.wrapper {
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('/assets/images/fondo-school-claro.jpg');
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body {
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.main-content-materia {
+  width: 100%;
+  padding: clamp(20px, 4vw, 32px) clamp(16px, 3vw, 28px) 0;
+}
+
+.header-home-materia {
+  width: min(100%, 980px);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 32px 28px;
+
+  div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+  }
+}
+
+.title-perfil {
+  font-family: Nexa-Bold, Arial, sans-serif;
+  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
+  color: #000000;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.subtitle-header {
+  font-family: Nexa-Light, Arial, sans-serif;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  color: #000000;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.actions-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+
+.back-btn {
+  border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  width: 48px;
+  height: 48px;
+
+  &:hover {
+    background-color: rgba(0, 146, 184, 0.1);
+  }
+}
+
+.back-icon {
+  width: auto!important;
+  height: auto!important;
+  font-size: 2rem;
+  color: #0092B8;
+}
+
+.body-materia {
+  width: 100%;
+  padding: 24px clamp(16px, 3vw, 28px) clamp(16px, 3vw, 28px);
+}
+
+.form-shell {
+  width: min(100%, 980px);
+  margin-inline: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+}
+
+
+/* =========================
+   Ajustes para la vista móvil (≤700px)
+   ========================= */
+
+@media (max-width: 700px) {
+  .main-content-materia {
+    padding: clamp(16px, 3vw, 24px) clamp(12px, 2vw, 20px) 0;
+  }
+
+  .header-home-materia {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 24px 20px;
+
+    div:first-child {
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  .actions-row {
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .body-materia {
+    padding: 16px clamp(12px, 2vw, 20px) clamp(16px, 3vw, 24px);
+  }
+
+  .form-shell {
+    padding: 24px 20px;
+  }
+
+  .title-perfil {
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .subtitle-header {
+    text-align: center;
+    line-height: 1.3;
+  }
+}
